@@ -14,16 +14,30 @@
         <h2>Vacation Contest Sign-Up Form</h2>
         <form method="GET" action="results.html">
             <div>
+                <!-- added required first last and email-->
                 <label for="firstname">Your First Name</label>
-                <input type="text" id="firstname" name="firstname">
+                <!--red aterisk-->
+                <span class="required-field">*</span>
+               <input type="text" id="firstname" minlength="2" maxlength="35" name="firstname" required>
                 <label for="lastname">Your Last Name</label>
-                <input type="text" id="lastname" name="lastname">
+                <span class="required-field">*</span>
+             <input type="text" id="lastname" minlength="2" maxlength="35" name="lastname" required>
+             
+             <label for="age">Your Age</label>
+             <span class="required-field">*</span>
+            <input type="number" min="21" max="120" name="age" id="age" required>
+         <h5>must be 21 or over to enter contest</h5>
+         <!--Secret Code -->
+         <label for="code">Your Secret Code</label>
+         <span class="required-field">*</span>
+         <input type="password" id="address" name="address" pattern="[0-9a-zA-Z]{6}" title="Alphanumeric Character Passcode" required>
             </div>
             <fieldset>
                 <legend>Your Contact Info</legend>
                 <div>
                     <label for="email">Your Email</label>
-                    <input type="email" id="email" name="email">
+                    <span class="required-field">*</span>
+                   <input type="email" id="email" name="email" required>
                 </div>
                 <div>
                     <label for="address">Your Street Address</label>
@@ -85,8 +99,9 @@
                         <option value="WV">West Virginia</option>
                         <option value="WY">Wyoming</option>
                     </datalist>
+                    <!--zip Pattern added-->
                     <label for="zip">Your Zipcode</label>
-                    <input type="text" id="zip" name="zip">
+                    <input type="text" pattern="[0-9]{5}" title= "5-Digit US ZIP Code" id="zip" name="zip">
                 </div>
             </fieldset>
 
